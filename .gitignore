@@ -1,5 +1,6 @@
 # Catálogo original (237 MB, supera el límite de GitHub; la web usa las fotos ya extraídas en img/)
 *.pdf
 .vercel
+.env*
 .DS_Store
 Thumbs.db
