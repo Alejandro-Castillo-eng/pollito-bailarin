@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pollito Bailarín · Tiendita kawaii</title>
+  <meta name="description" content="Pollito Bailarín: tiendita kawaii en Perú con Sanrio, Sylvanian Families, Chiikawa, blind boxes, peluches y papelería. Pedidos por WhatsApp, pagos con Yape y BCP.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐣</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@1,500;1,700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <!-- ░░ Navegación ░░ -->
+  <header class="nav" id="nav">
+    <a class="nav__logo" href="#inicio" aria-label="Pollito Bailarín, inicio">
+      <span class="nav__pollito" aria-hidden="true">🐣</span>
+      <span class="script">Pollito Bailarín</span>
+    </a>
+    <nav class="nav__links" id="menu" aria-label="Secciones">
+      <a href="#como-comprar">Cómo comprar</a>
+      <a href="#vitrina">Vitrina 3D</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#videos">Videos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="nav__acciones">
+      <button class="btn-pedido" id="abrirPedido" aria-label="Ver mi pedido">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 7a3 3 0 0 1 6 0" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        <span class="btn-pedido__num" id="contadorPedido">0</span>
+      </button>
+      <button class="nav__hamburguesa" id="hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ░░ Hero con escena Three.js ░░ -->
+    <section class="hero" id="inicio">
+      <canvas class="hero__canvas" id="escenaHero" aria-label="Pollito bailarín en 3D bailando entre botones, estrellas y corazones"></canvas>
+      <div class="hero__contenido">
+        <p class="hero__sello">Tiendita kawaii · Perú</p>
+        <h1 class="hero__titulo">
+          <span class="script">Pollito</span>
+          <span class="script hero__titulo-2">Bailarín</span>
+        </h1>
+        <p class="hero__texto">Sanrio, Sylvanian Families, Chiikawa, blind boxes, peluches y papelería bonita. Todo empacado con cariño para que llegue seguro a ti <span aria-hidden="true">:3</span></p>
+        <div class="hero__botones">
+          <a class="btn btn--fuerte" href="#catalogo">Ver catálogo</a>
+          <a class="btn btn--claro" id="heroWhatsapp" href="#" target="_blank" rel="noopener">Escríbenos</a>
+        </div>
+        <p class="hero__pista">Toca al pollito para que haga una pirueta ✨</p>
+      </div>
+      <a class="hero__bajar" href="#como-comprar" aria-label="Bajar a cómo comprar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </section>
+
+    <!-- ░░ Cinta ░░ -->
+    <div class="cinta" aria-hidden="true">
+      <div class="cinta__pista">
+        <span>★ Pagos con Yape y BCP</span><span>♥ Separa con el 50%</span><span>★ Envíos coordinados</span><span>♥ Empaque seguro</span><span>★ Ofertas en blind boxes</span><span>♥ Novedades cada semana</span>
+        <span>★ Pagos con Yape y BCP</span><span>♥ Separa con el 50%</span><span>★ Envíos coordinados</span><span>♥ Empaque seguro</span><span>★ Ofertas en blind boxes</span><span>♥ Novedades cada semana</span>
+      </div>
+    </div>
+
+    <!-- ░░ Cómo comprar ░░ -->
+    <section class="seccion rayas" id="como-comprar">
+      <h2 class="titulo-seccion"><span class="script">¿Cómo</span> <em>comprar?</em></h2>
+      <ol class="pasos">
+        <li class="paso">
+          <span class="paso__clip" aria-hidden="true"></span>
+          <span class="paso__num">1</span>
+          <h3>Escríbenos</h3>
+          <p>Envíanos una captura del producto que desees (o arma tu pedido aquí). Te responderemos lo más pronto posible.</p>
+        </li>
+        <li class="paso">
+          <span class="paso__clip" aria-hidden="true"></span>
+          <span class="paso__num">2</span>
+          <h3>Realiza el pago</h3>
+          <p>Paga tu producto y coordinamos el envío. Aceptamos <strong>Yape</strong> y <strong>BCP</strong>. Lo que dice <em>pronto disponible</em> lo separas con el 50%.</p>
+        </li>
+        <li class="paso">
+          <span class="paso__clip" aria-hidden="true"></span>
+          <span class="paso__num">3</span>
+          <h3>¡Llega a ti!</h3>
+          <p>Empacamos tu pedido con mucho cuidado para que llegue lo más seguro a ti :3</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ░░ Vitrina 3D ░░ -->
+    <section class="seccion vitrina" id="vitrina">
+      <h2 class="titulo-seccion"><span class="script">Vitrina</span> <em>favorita</em></h2>
+      <p class="subtitulo">Arrastra para girar la vitrina y toca un producto para verlo de cerca.</p>
+      <div class="vitrina__escenario">
+        <canvas id="escenaVitrina" aria-label="Carrusel 3D con productos destacados"></canvas>
+        <div class="vitrina__etiqueta" id="vitrinaEtiqueta" aria-live="polite">
+          <strong id="vitrinaNombre"></strong>
+          <span id="vitrinaPrecio"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ Catálogo ░░ -->
+    <section class="seccion rayas" id="catalogo">
+      <h2 class="titulo-seccion"><span class="script">Catálogo</span></h2>
+      <div class="filtros">
+        <div class="filtros__categorias" id="filtrosCategorias" role="tablist" aria-label="Categorías"></div>
+        <div class="filtros__extra">
+          <label class="interruptor"><input type="checkbox" id="soloOfertas"><span></span>Solo ofertas</label>
+          <label class="interruptor"><input type="checkbox" id="ocultarAgotados"><span></span>Ocultar agotados</label>
+        </div>
+      </div>
+      <div class="grilla" id="grillaProductos"></div>
+      <p class="grilla__vacio" id="grillaVacia" hidden>No hay productos con esos filtros 🥺</p>
+    </section>
+
+    <!-- ░░ Videos ░░ -->
+    <section class="seccion videos" id="videos">
+      <h2 class="titulo-seccion"><span class="script">Videos</span> <em>kawaii</em></h2>
+      <p class="subtitulo">Conoce el mundo de tus personajes favoritos mientras eliges tu próximo tesoro.</p>
+      <div class="videos__grilla" id="grillaVideos"></div>
+    </section>
+
+    <!-- ░░ Contacto ░░ -->
+    <section class="seccion rayas contacto" id="contacto">
+      <div class="contacto__tarjeta">
+        <h2 class="titulo-seccion"><span class="script">Thank</span> <em>you</em></h2>
+        <p class="contacto__texto">Pedidos a:</p>
+        <ul class="contacto__lista">
+          <li><a id="contactoWhatsapp" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            <span>924 943 033 (WhatsApp)</span></a></li>
+          <li><a id="contactoInstagram" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+            <span>@pollitobailarin.pe</span></a></li>
+          <li><a id="contactoTiktok" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 3c.4 2.8 2.2 4.6 5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <span>@pollito.bailarinn (TikTok)</span></a></li>
+        </ul>
+        <p class="contacto__pagos">Pagos con <strong>Yape</strong> y <strong>BCP</strong></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p><span class="script">Pollito Bailarín</span> · hecho con <span aria-hidden="true">♥</span> en Perú</p>
+    <p class="pie__redes">
+      <a id="pieInstagram" href="#" target="_blank" rel="noopener">Instagram</a>
+      <span aria-hidden="true">·</span>
+      <a id="pieTiktok" href="#" target="_blank" rel="noopener">TikTok</a>
+    </p>
+    <p class="pie__nota">Las marcas y personajes pertenecen a sus respectivos dueños. Los videos se muestran desde YouTube.</p>
+  </footer>
+
+  <!-- ░░ Modal de producto ░░ -->
+  <dialog class="modal" id="modalProducto" aria-labelledby="modalNombre">
+    <button class="modal__cerrar" data-cerrar aria-label="Cerrar">×</button>
+    <div class="modal__cuerpo">
+      <div class="modal__galeria">
+        <img id="modalImagen" alt="">
+        <div class="modal__miniaturas" id="modalMiniaturas"></div>
+      </div>
+      <div class="modal__info">
+        <p class="modal__categoria" id="modalCategoria"></p>
+        <h3 id="modalNombre"></h3>
+        <div class="modal__precio" id="modalPrecio"></div>
+        <div class="modal__insignias" id="modalInsignias"></div>
+        <p class="modal__nota" id="modalNota"></p>
+        <div class="modal__cantidad">
+          <span>Cantidad</span>
+          <div class="contador">
+            <button id="modalMenos" aria-label="Menos">−</button>
+            <output id="modalCantidad">1</output>
+            <button id="modalMas" aria-label="Más">+</button>
+          </div>
+        </div>
+        <button class="btn btn--fuerte btn--ancho" id="modalAgregar">Agregar al pedido</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ░░ Panel de pedido ░░ -->
+  <aside class="pedido" id="panelPedido" aria-label="Mi pedido" aria-hidden="true">
+    <div class="pedido__fondo" data-cerrar-pedido></div>
+    <div class="pedido__panel">
+      <header class="pedido__cabecera">
+        <h2><span class="script">Mi pedido</span></h2>
+        <button class="modal__cerrar" data-cerrar-pedido aria-label="Cerrar pedido">×</button>
+      </header>
+      <ul class="pedido__lista" id="listaPedido"></ul>
+      <p class="pedido__vacio" id="pedidoVacio">Tu pedido está vacío. ¡Elige algo bonito! 🐣</p>
+      <footer class="pedido__pie">
+        <div class="pedido__total"><span>Total</span><strong id="totalPedido">S/ 0</strong></div>
+        <p class="pedido__aviso" id="avisoSeparar" hidden>Los productos «pronto disponible» se separan con el 50%.</p>
+        <a class="btn btn--fuerte btn--ancho" id="enviarPedido" href="#" target="_blank" rel="noopener">Enviar pedido por WhatsApp</a>
+        <button class="pedido__vaciar" id="vaciarPedido">Vaciar pedido</button>
+      </footer>
+    </div>
+  </aside>
+
+  <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+
+  <script type="module" src="js/tienda.js"></script>
+  <script type="module" src="js/escena.js"></script>
+  <script type="module" src="js/vitrina.js"></script>
+</body>
+</html>
