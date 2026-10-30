@@ -38,7 +38,8 @@ export const PRODUCTOS = [
   { id: 'bolso-sanrio', nombre: 'Bolso Sanrio Cinnamoroll y My Melody', categoria: 'bolsos', precio: 25, estado: 'pronto', imgs: [img('bolso-my-melody'), img('bolso-cinnamoroll')] },
   { id: 'mochila-fresita', nombre: 'Mochila Fresita', categoria: 'bolsos', precio: 45, estado: 'pronto', imgs: [img('mochila-fresita')] },
   { id: 'monedero-sanrio', nombre: 'Monedero Sanrio', categoria: 'bolsos', precio: 6, antes: 8, porUnidad: true, estado: 'disponible', nota: 'Quedan pocos modelos, ¡pregunta por los disponibles!', imgs: [img('monedero-sanrio')] },
-  { id: 'monedero-hello-kitty', nombre: 'Monedero Hello Kitty', categoria: 'bolsos', precio: 8, antes: 10, porUnidad: true, estado: 'agotado', nota: 'Medidas: 10 cm × 8 cm.', imgs: [img('monedero-hello-kitty')] },
+  { id: 'monedero-hello-kitty-rojo', nombre: 'Monedero Hello Kitty (lazo rojo)', categoria: 'bolsos', precio: 8, antes: 10, estado: 'disponible', nota: 'Medidas: 10 cm × 8 cm.', imgs: [img('monedero-hello-kitty-lazo-rojo')] },
+  { id: 'monedero-hello-kitty-blanco', nombre: 'Monedero Hello Kitty (lazo blanco)', categoria: 'bolsos', precio: 8, antes: 10, estado: 'agotado', nota: 'Medidas: 10 cm × 8 cm.', imgs: [img('monedero-hello-kitty-lazo-blanco')] },
 
   // 03 · Peluches y llaveros
   { id: 'peluche-perrito-rosa', nombre: 'Peluche Perrito rosado', categoria: 'peluches', precio: 11.5, estado: 'disponible', nota: 'Mide aprox. 15 cm.', imgs: [img('peluche-perrito-rosa')] },
